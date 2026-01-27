@@ -3,25 +3,23 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 
-// https://astro.build/config
 export default defineConfig({
-  // GitHub Pages configuration
-  site: 'https://xaugelinux.github.io/formulario-contacto',
-  base: '/formulario-contacto',
+  site: 'https://xaugelinux.github.io',
+  base: '/formulario-contacto/',
   output: 'static',
 
   compressHTML: true,
-  
+
   build: {
     inlineStylesheets: 'always',
   },
-  
+
   vite: {
     plugins: [tailwindcss()],
     build: {
-      assetsInlineLimit: 10240
-    }
+      assetsInlineLimit: 10240,
+    },
   },
-  
-  integrations: [react()]
+
+  integrations: [react()],
 });
