@@ -1,11 +1,27 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import node from '@astrojs/node';
+
+import tailwindcss from '@tailwindcss/vite';
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-    output: 'server',
-    adapter: node({
-        mode: 'standalone',
-  }),
+  // GitHub Pages configuration
+  site: 'https://xaugelinux.github.io/formulario-contacto',
+  base: '/formulario-contacto',
+  output: 'static',
+
+  compressHTML: true,
+  build: {
+    inlineStylesheets: 'always',
+    assetsInlineLimit: 10240, // 10KB to inline achievements.css (7.5KB)
+  },
+  vite: {
+    plugins: [tailwindcss()],
+    build: {
+      assetsInlineLimit: 10240,
+    }
+  },
+
+  integrations: [react()]
 });
