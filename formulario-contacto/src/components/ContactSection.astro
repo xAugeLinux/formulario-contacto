@@ -3,35 +3,45 @@
 
 <section id="three">
   <h2>Información de contacto</h2>
-    <p>Puedes contactarme en:</p>
+    <p>Puedes contactarme enviando un mensaje:</p>
     <div class="row">
 		<div class="col-8 col-12-small">
-			<form method="post" action="#">
-				<div class="row gtr-uniform gtr-50">
-					<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-					<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-					<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-				</div>
-			</form>
-			<ul class="actions">
-				<li><input type="submit" value="Send Message" /></li>
-			</ul>
+			<form id="contact-form">
+                <div class="row gtr-uniform gtr-50">
+                    <div class="col-6 col-12-xsmall">
+                    <input type="text" name="name" id="name" placeholder="Nombre" required />
+                    </div>
+
+                    <div class="col-6 col-12-xsmall">
+                    <input type="email" name="email" id="email" placeholder="Correo Electrónico" required />
+                    </div>
+
+                    <div class="col-12">
+                    <textarea name="message" id="message" placeholder="Mensaje" rows="4" required></textarea>
+                    </div>
+
+                    <div class="col-12">
+                    <input type="submit" value="Enviar Mensaje" />
+                    </div>
+                </div>
+            </form>
+
 		</div>
 		<div class="col-4 col-12-small">
 			<ul class="labeled-icons">
 				<li>
-					<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-					1234 Somewhere Rd.<br />
-					Nashville, TN 00000<br />
-					United States
+					<h3 class="icon solid fa-home"><span class="label">Dirección</span></h3>
+					Ciudad Madero, Tamaulipas<br />
+					Colonia Guadalupe Victoria<br />
+					México
 				</li>
 				<li>
-					<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+					<h3 class="icon solid fa-mobile-alt"><span class="label">Teléfono</span></h3>
 					000-000-0000
 				</li>
 				<li>
-					<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-					<a href="#">hello@untitled.tld</a>
+					<h3 class="icon solid fa-envelope"><span class="label">Correo Electrónico</span></h3>
+					<a href="#">jose.alonso@gmail.com</a>
 				</li>
 			</ul>
 		</div>
